@@ -10,10 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171109193907) do
+ActiveRecord::Schema.define(version: 20171109203015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "assignment_chores", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "chore_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chore_id"], name: "index_assignment_chores_on_chore_id"
+    t.index ["user_id"], name: "index_assignment_chores_on_user_id"
+  end
+
+  create_table "chores", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "duration", null: false
+    t.boolean "status", default: false
+    t.date "date", null: false
+    t.bigint "household_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["household_id"], name: "index_chores_on_household_id"
+  end
+
+  create_table "household_users", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "household_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["household_id"], name: "index_household_users_on_household_id"
+    t.index ["user_id"], name: "index_household_users_on_user_id"
+  end
+
+  create_table "households", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "home_address", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -32,4 +68,9 @@ ActiveRecord::Schema.define(version: 20171109193907) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "assignment_chores", "chores"
+  add_foreign_key "assignment_chores", "users"
+  add_foreign_key "chores", "households"
+  add_foreign_key "household_users", "households"
+  add_foreign_key "household_users", "users"
 end
