@@ -36,3 +36,16 @@ Stretch Goals:
 - Allow users to upload images of their bills and be able to send out individual invoices to their roommates. 
 - Allow users to hold a group chat within the application.
 
+
+
+Working Agreement: 
+
+- Midnight work cutoff 
+- Be on time!
+- Verbal or slack communication when a pull request is made 
+- DO NOT MERGE YOUR OWN PULL REQUEST 
+- Work on a seperate branch ALWAYS
+- Commit after each individual task
+- Check the Trello Board constantly ( https://trello.com/b/8hN80Z03/chore-turn )
+- Update the Trello Board as you move through tasks
+
