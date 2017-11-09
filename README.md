@@ -2,25 +2,25 @@
 *The essential mobile roommate app*
 
 
-Description: 
+### Description: 
 
 There are certain challenges that are completely unique to living with roommates. Who's turn is it to take the trash out? When is the last time the kitchen was cleaned and etc... Chore Turn allows users to create households to which they can invite their roommates to begin scheduling out chores, including a household calendar. 
 
 
 
-User Story:
+### User Story:
 
 As a user, I want to assign chores to my roommates so that we can organize our household upkeep.
 
 
 
-MVP: 
+### MVP: 
 
 Our minimum viable product is to allow users to create an account, to then be able to create a household and add other roommates by email to then assign chores with optional duration times and dates. 
 
 
 
-Technologies: 
+### Technologies: 
 
 - Rails (back-end)
 - React Native (front-end) ( https://facebook.github.io/react-native/ )
@@ -30,7 +30,7 @@ OR
 
 
 
-Stretch Goals: 
+### Stretch Goals: 
 
 - Allow a household to create a "board" of household notes
 - Allow users to upload images of their bills and be able to send out individual invoices to their roommates. 
@@ -38,7 +38,7 @@ Stretch Goals:
 
 
 
-Working Agreement: 
+### Working Agreement: 
 
 - Midnight work cutoff 
 - Be on time!
