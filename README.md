@@ -16,7 +16,7 @@ Our minimum viable product is to allow users to create an account, to then be ab
 Technologies: 
 
 - Rails (back-end)
-- React Native (front-end)( https://facebook.github.io/react-native/ )
+- React Native (front-end) ( https://facebook.github.io/react-native/ )
 - Google Calendar API ( https://developers.google.com/google-apps/calendar/ )
 
 Stretch Goals: 
