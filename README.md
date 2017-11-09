@@ -1,13 +1,17 @@
 # Chore Turn
-The essential mobile roommate app
+*The essential mobile roommate app*
 
 Description: 
 
 There are certain challenges that are completely unique to living with roommates. Who's turn is it to take the trash out? When is the last time the kitchen was cleaned and etc... Chore Turn allows users to create households to which they can invite their roommates to begin scheduling out chores, including a household calendar. 
 
+User Story:
+
+As a user, I want to assign chores to my roommates so that we can organize our household upkeep.
+
 MVP: 
 
-Our minimum viable product is to allow users to create an account, to then be able to create a household and add other roommates by email to assign chores.
+Our minimum viable product is to allow users to create an account, to then be able to create a household and add other roommates by email to then assign chores with optional duration times and dates. 
 
 Technologies: 
 
