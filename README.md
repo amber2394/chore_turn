@@ -17,6 +17,8 @@ Technologies:
 
 - Rails (back-end)
 - React Native (front-end) ( https://facebook.github.io/react-native/ )
+OR 
+- Progressive Web App (front-end) ( https://developers.google.com/web/progressive-web-apps/ )
 - Google Calendar API ( https://developers.google.com/google-apps/calendar/ )
 
 Stretch Goals: 
