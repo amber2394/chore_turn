@@ -1,4 +1,8 @@
 class HouseholdsController < ApplicationController
+  def index
+    @households = Household.all
+  end
+
   def show
     @household = Household.find(params[:id])
   end
