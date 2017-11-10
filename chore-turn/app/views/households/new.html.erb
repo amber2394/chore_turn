@@ -1,18 +1,4 @@
 
 <h1>Household</h1>
 
-<%= form_with scope: :household, url: households_path, local: true do |form| %>
-  <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </p>
-
-  <p>
-    <%= form.label :home_address %><br>
-    <%= form.text_field :home_address %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<%= render 'form' %>

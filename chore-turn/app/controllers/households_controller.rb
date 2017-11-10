@@ -8,18 +8,40 @@ class HouseholdsController < ApplicationController
   end
 
   def new
+    @household = Household.new
+  end
 
+  def edit
+    @household = Household.find(params[:id])
   end
 
   def create
     @household = Household.new(household_params)
-
-    @household.save
-    redirect_to @household
+    if @household.save
+      redirect_to @household
+    else
+      render 'new'
+    end
   end
+
+  def update
+    @household = Household.find(params[:id])
+    if @household.update(household_params)
+      redirect_to @household
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+  @household = Household.find(params[:id])
+  @household.destroy
+
+  redirect_to households_path
+end
 
   private
   def household_params
-    params.require(:household).permit(:name, :home_address)
+    params.require(:household).permit(:id, :name, :home_address)
   end
 end
