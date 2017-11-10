@@ -1,0 +1,2 @@
+module HouseholdHelper
+end

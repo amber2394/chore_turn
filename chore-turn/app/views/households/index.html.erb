@@ -1,0 +1,15 @@
+<h1>Households</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Home address</th>
+  </tr>
+
+
+  <% @households.each do |household| %>
+    <tr>
+      <td><%= household.name %></td>
+      <td><%= household.home_address %></td>
+    </tr>
+  <% end %>

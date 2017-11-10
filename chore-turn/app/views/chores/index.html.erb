@@ -1,0 +1,26 @@
+<h1>Chore List</h1>
+
+<%= link_to 'New chore', new_chore_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Duration</th>
+    <th>Date</th>
+    <th>Status</th>
+  </tr>
+
+  <% @chores.each do |chore| %>
+    <tr>
+      <td><%= chore.name %></td><br>
+      <td><%= chore.duration %></td><br>
+      <td><%= chore.date %></td><br>
+      <td><%= chore.status %></td><br>
+
+      <td><%= link_to 'My Chores', controller: 'chores' %></td>
+      <td><%= link_to 'Edit', edit_chore_path(chore) %></td>
+      <td><%= link_to 'Destroy', article_path(chore),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

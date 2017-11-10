@@ -1,0 +1,45 @@
+<%= form_with model: @chore do |form| %>
+
+<% if @chore.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@chore.errors.count, "error") %> prohibited
+      this chore from being saved:
+    </h2>
+    <ul>
+      <% @chore.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+  <p>
+    <%= form.label :household %><br>
+    <%= form.text_field :household_id %>
+  </p>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :duration %><br>
+    <%= form.text_field :duration %>
+  </p>
+
+  <p>
+    <%= form.label :status %><br>
+    <%= form.text_field :status %>
+  </p>
+
+  <p>
+    <%= form.label :date %><br>
+    <%= form.text_field :date %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
