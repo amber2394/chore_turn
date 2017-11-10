@@ -1,0 +1,27 @@
+<p>
+  <strong>Name:</strong>
+  <%= @household.name %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @household.home_address %>
+</p>
+
+<h2>Add a household:</h2>
+<%= form_with(model: [ @household, @household.name.build ]) do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :home_address %><br>
+    <%= form.text_area :home_address %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Edit', edit_household_path(@household) %> |
+<%= link_to 'Back', households_path %>
