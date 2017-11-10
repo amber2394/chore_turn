@@ -46,7 +46,10 @@ ActiveRecord::Schema.define(version: 20171109230153) do
 
   create_table "households", force: :cascade do |t|
     t.string "name", null: false
-    t.string "home_address", null: false
+    t.string "address", null: false
+    t.string "city", null: false
+    t.string "state", null: false
+    t.integer "zip_code", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

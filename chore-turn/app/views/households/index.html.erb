@@ -1,15 +1,25 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Households</h1>
 
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Home address</th>
-  </tr>
-
-
-  <% @households.each do |household| %>
+  <thead>
     <tr>
-      <td><%= household.name %></td>
-      <td><%= household.home_address %></td>
+      <th colspan="3"></th>
     </tr>
-  <% end %>
+  </thead>
+
+  <tbody>
+    <% @households.each do |household| %>
+      <tr>
+        <td><%= link_to 'Show', household %></td>
+        <td><%= link_to 'Edit', edit_household_path(household) %></td>
+        <td><%= link_to 'Destroy', household, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Household', new_household_path %>
